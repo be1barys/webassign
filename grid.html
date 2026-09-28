@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Mondrian Composition</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 8px;
+  background-color: #000;
+  border: 8px solid #000;
+
+  
+  width: 80vh;
+  height: 80vh;
+  max-width: 90vw;
+}
+
+    .cell {
+      background-color: #fff;
+    }
+
+    .blue {
+      background-color: #1e63d5;
+      grid-column: 1 / 3;
+      grid-row: 1 / 4;
+    }
+
+    .top-white {
+      grid-column: 3 / 7;
+      grid-row: 1 / 2;
+    }
+
+    .yellow {
+      background-color: #f6b500;
+      grid-column: 3 / 5;
+      grid-row: 2 / 4;
+    }
+
+    .mid-white {
+      grid-column: 5 / 7;
+      grid-row: 2 / 5;
+    }
+
+    .red {
+      background-color: #db1d24;
+      grid-column: 1 / 4;
+      grid-row: 4 / 7;
+    }
+
+    .black {
+      background-color: #1a1a1a;
+      grid-column: 4 / 5;
+      grid-row: 4 / 7;
+    }
+
+    .bottom-white {
+      grid-column: 5 / 7;
+      grid-row: 5 / 7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="cell blue"></div>
+    <div class="cell top-white"></div>
+    <div class="cell yellow"></div>
+    <div class="cell mid-white"></div>
+    <div class="cell red"></div>
+    <div class="cell black"></div>
+    <div class="cell bottom-white"></div>
+  </div>
+
+</body>
+</html>

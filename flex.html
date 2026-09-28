@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2: Component Library (Flexbox)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px; 
+    }
+
+    .component {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #eee;
+      padding: 10px 20px;
+      border-radius: 4px;
+      flex-wrap: wrap;
+    }
+    .nav-logo {
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+    .nav-buttons {
+      margin-left: auto; 
+      flex-shrink: 0;  
+      display: flex;
+      gap: 10px;
+    }
+
+    .cards-row {
+      display: flex;
+      gap: 20px;
+      align-items: stretch; 
+    }
+    .card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #f9f9f9;
+      padding: 15px;
+      border: 1px solid #ddd;
+    }
+    .card-text {
+      margin-bottom: 15px;
+    }
+    .card .btn {
+      margin-top: auto; 
+    }
+
+    .pagination-bar {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .page-spacer {
+      flex: 1; 
+    }
+    .page-controls {
+      display: flex;
+      gap: 5px;
+    }
+    .page-controls button {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+    .page-count {
+      flex: 1; 
+      text-align: right;
+      color: #666;
+    }
+
+  
+    .comment {
+      display: flex;
+      gap: 15px;
+      background: #f9f9f9;
+      padding: 15px;
+      border: 1px solid #ddd;
+    }
+    .avatar {
+      width: 50px;
+      height: 50px;
+      background: #007bff;
+      border-radius: 50%;
+      flex-shrink: 0; 
+    }
+
+    .pricing-table {
+      display: flex;
+      gap: 20px;
+      align-items: center; 
+    }
+    .price-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    .price-card.recommended {
+      padding: 40px 20px;
+      background: #e3f2fd;
+      border-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="component">
+      <nav class="navbar">
+        <img class="nav-logo" src="logo.jpg" alt="LOGO" width="75" height="50">
+        <ul class="nav-links">
+          <li>Link 1</li>
+          <li>Link 2</li>
+          <li>long.             link</li>
+        </ul>
+        <div class="nav-buttons">
+          <button class="btn">Login</button>
+          <button class="btn">Sign Up</button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="component">
+      <div class="cards-row">
+        <div class="card">
+          <h3>Card 1</h3>
+          <p class="card-text">Short text.</p>
+          <button class="btn">Action</button>
+        </div>
+        <div class="card">
+          <h3>Card 2</h3>
+          <p class="card-text">A bit longer text to see how the layout handles different heights.</p>
+          <button class="btn">Action</button>
+        </div>
+        <div class="card">
+          <h3>Card 3</h3>
+          <p class="card-text">Very long text. Very long text. Very long text. Very long text. Very long text.</p>
+          <button class="btn">Action</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="component">
+      <div class="pagination-bar">
+        <div class="page-spacer"></div>
+        <div class="page-controls">
+          <button>&lt;</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>&gt;</button>
+        </div>
+        <div class="page-count">1-10 of 50 results</div>
+      </div>
+    </div>
+
+    <div class="component">
+      <div class="comment">
+        <div class="avatar"></div>
+        <div class="comment-text">
+          <p>This is a comment. The text wraps here. Even if it is very long, it will never slide under the avatar because the avatar has flex-shrink: 0.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="component">
+      <div class="pricing-table">
+        <div class="price-card">
+          <h3>Basic</h3>
+          <p>$10</p>
+        </div>
+        <div class="price-card recommended">
+          <h3>Pro (Recommended)</h3>
+          <p>$30</p>
+        </div>
+        <div class="price-card">
+          <h3>Enterprise</h3>
+          <p>$100</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

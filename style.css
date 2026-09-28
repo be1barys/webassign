@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f0f4f8;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.controls button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+
+.container {
+  display: grid;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pic {
+  background: #9ca3af;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.text {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.date {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.layout-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.layout-grid .item {
+  flex-direction: column;
+}
+
+.layout-grid .pic {
+  width: 100%;
+  height: 180px;
+}
+
+.layout-grid .content {
+  padding: 16px;
+  flex: 1;
+}
+
+.layout-grid .date {
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  margin-top: auto; 
+}
+
+.layout-list {
+  grid-template-columns: 1fr; 
+}
+
+.layout-list .item {
+  flex-direction: row; 
+  align-items: center;
+  padding: 12px;
+  gap: 16px;
+  flex-wrap: wrap; 
+}
+
+.layout-list .pic {
+  width: 120px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+.layout-list .content {
+  flex: 1 1 200px; 
+}
+
+.layout-list .date {
+  margin-left: auto; 
+  flex-shrink: 0;
+}
+
+.layout-magazine {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-flow: dense; 
+}
+
+.layout-magazine .item {
+  flex-direction: column;
+}
+
+.layout-magazine .pic {
+  width: 100%;
+  height: 150px;
+}
+
+.layout-magazine .content {
+  padding: 16px;
+  flex: 1;
+}
+
+.layout-magazine .date {
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  margin-top: auto;
+}
+
+
+.layout-magazine .item:first-child {
+  grid-column: span 2; 
+  grid-row: span 2;    
+}
+
+.layout-magazine .item:first-child .pic {
+  height: 300px; 
+}

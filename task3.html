@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3: Three Layouts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="controls">
+    <button onclick="document.getElementById('content-box').className = 'container layout-grid'">(1) Grid</button>
+    <button onclick="document.getElementById('content-box').className = 'container layout-list'">(2) List</button>
+    <button onclick="document.getElementById('content-box').className = 'container layout-magazine'">(3) Magazine</button>
+  </div>
+
+  <div id="content-box" class="container layout-grid">
+    
+    <article class="item">
+      <div class="pic">IMG</div>
+      <div class="content">
+        <h2 class="title">Главная новость дня</h2>
+        <p class="text">Это очень длинное описание для первой карточки. Оно содержит много текста, чтобы показать, как макет адаптируется под разный объем контента без жестко заданных высот.</p>
+      </div>
+      <div class="date">24 Окт</div>
+    </article>
+
+    <article class="item">
+      <div class="pic">IMG</div>
+      <div class="content">
+        <h2 class="title">Короткий заголовок</h2>
+        <p class="text">Среднее по длине описание продукта или статьи.</p>
+      </div>
+      <div class="date">23 Окт</div>
+    </article>
+
+    <article class="item">
+      <div class="pic">IMG</div>
+      <div class="content">
+        <h2 class="title">Еще один пост</h2>
+        <p class="text">Совсем короткий текст.</p>
+      </div>
+      <div class="date">22 Окт</div>
+    </article>
+
+    <article class="item">
+      <div class="pic">IMG</div>
+      <div class="content">
+        <h2 class="title">Аналитика</h2>
+        <p class="text">Здесь снова достаточно длинный текст, который должен корректно переноситься и не ломать соседние колонки в сетке.</p>
+      </div>
+      <div class="date">21 Окт</div>
+    </article>
+    
+    <article class="item">
+      <div class="pic">IMG</div>
+      <div class="content">
+        <h2 class="title">Обновление</h2>
+        <p class="text">Небольшой анонс.</p>
+      </div>
+      <div class="date">20 Окт</div>
+    </article>
+
+  </div>
+
+</body>
+</html>
